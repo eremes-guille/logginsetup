@@ -1,0 +1,68 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Dashboard</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/users/logout" class="btn btn-danger">Logout</a>
+                    <a href="#" class="btn btn-secondary">Data</a>
+                    <a href="#" class="btn btn-secondary">Stock</a>
+                </li>
+            </ul>
+        </nav>
+        <p class="text-center mb-3">Welcome <%= name %></p>
+        <%- include('partials/messages'); %>
+        <form action="/users/login" method="POST">
+          <div class="form-group text-center mb-3">
+            <label>Data</label>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Product 1</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rp12.999.000</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Add</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Product 2</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rp14.999.000</span>
+                        <button class="btn btn-primary shop-item-button"type="button">Add</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Product 3</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rp9.999.000</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Add</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Product 4</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rp1.999.000</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Add</button>
+                    </div>
+                </div>
+            </div>
+            <h2>Total</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">Rp0</span>
+                <br>
+                <span id="date"></span>
+            </div>
+            <button class="btn btn-secondary btn-purchase" type="button">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
